@@ -11,7 +11,12 @@ const alexaRank = async (domain) => {
     const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.goto(`https://www.alexa.com/siteinfo/${domain}`);
-    const rank = await page.$eval('.globleRank .metrics-data', el => el.innerText);
+    const rank = await page.$('.globleRank .metrics-data', el => el.innerText);
+
+    if (!rank) {
+        throw new Error(`Error: "${domain}" is not a valid domain`);
+    }
+
     await browser.close();
 
     return rank.trim();
@@ -25,7 +30,7 @@ const action = async (domain) => {
         process.exit(1);
     }
 
-    const rank = await alexaRank(domain);
+    const rank = await alexaRank(domain).catch(({ message }) => spinner.fail(message) && process.exit(2));
     spinner.stopAndPersist({ symbol: '✔' });
 
     if (rank !== '-') {
