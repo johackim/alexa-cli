@@ -21,7 +21,7 @@ npm i -g alexa-cli
 ### Usage
 
 ```bash
-alexa-cli <website>
+alexa <website>
 ```
 
 ## Support

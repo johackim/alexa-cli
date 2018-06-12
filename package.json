@@ -28,11 +28,11 @@
   },
   "preferGlobal": true,
   "bin": {
-    "alexa-cli": "build/alexa-cli.js"
+    "alexa": "build/alexa.js"
   },
   "scripts": {
     "prepublish": "npm run build",
-    "start": "babel-node src/alexa-cli.js",
+    "start": "babel-node src/alexa.js",
     "build": "babel src/ --compact true --out-dir build/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
