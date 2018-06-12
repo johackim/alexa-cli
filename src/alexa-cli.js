@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import puppeteer from 'puppeteer';
 import program from 'commander';
 import { isFQDN } from 'validator';
