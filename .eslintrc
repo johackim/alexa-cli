@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+      "indent": [2, 4, {"SwitchCase": 1}],
+      "max-len": [2, {"code": 200, "tabWidth": 4, "ignoreUrls": true}],
+      "object-curly-newline": [0],
+      "func-names": [0],
+      "arrow-body-style": [0],
+      "no-param-reassign": [0],
+      "react/prop-types": [0],
+      "import/no-extraneous-dependencies": [0]
+  }
+}
