@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import 'babel-polyfill';
 import puppeteer from 'puppeteer';
 import program from 'commander';
 import { isFQDN } from 'validator';
