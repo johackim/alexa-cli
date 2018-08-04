@@ -1,6 +1,6 @@
 {
   "name": "alexa-cli",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Get Alexa Traffic Ranks",
   "homepage": "https://github.com/ston3o/alexa-cli",
   "repository": {
@@ -40,8 +40,8 @@
   "author": "ston3o",
   "license": "GPL-3.0",
   "keywords": [
-      "alexa",
-      "alexa.com",
-      "rank"
+    "alexa",
+    "alexa.com",
+    "rank"
   ]
 }
