@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-> Get Alexa Traffic Ranks
+> CLI tool to get Alexa traffic ranks
 
 ### Requirements
 
