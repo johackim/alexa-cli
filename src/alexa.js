@@ -10,7 +10,7 @@ import { version } from '../package.json';
 const alexaRank = async (domain) => {
     const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
-    await page.goto(`https://www.alexa.com/siteinfo/${domain}`);
+    await page.goto(`https://www.alexa.com/siteinfo/${domain}?ver=classic`);
     const rank = await page.$eval('.globleRank .metrics-data', el => el.innerText).catch(() => {
         throw new Error(`Error: "${domain}" is not a valid domain`);
     });
