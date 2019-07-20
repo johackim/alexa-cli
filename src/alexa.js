@@ -11,8 +11,8 @@ const alexaRank = async (domain) => {
     const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.goto(`https://www.alexa.com/siteinfo/${domain}`);
-    const rank = await page.$eval('.big.data', el => el.innerText).catch(() => {
-        throw new Error(`Error: "${domain}" is not a valid domain`);
+    const rank = await page.$eval('.rankmini-rank', el => el.innerText).catch(() => {
+        throw new Error(`Error: "${domain}" is not ranked with Alexa`);
     });
 
     await browser.close();
